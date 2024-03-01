@@ -63,7 +63,7 @@ def spisok_f():
 def spisok_h():
     global spisok_horr
     if len(spisok_horr) == 0:
-        responce_get_h = requests.get('https://www.film.ru/a-z/movies')
+        responce_get_h = requests.get('https://www.film.ru/a-z/movies/horror')
         soup_h = bs(responce_get_h.text, features='html.parser')
         quot_h = soup_h.find_all('a', class_='redesign_afisha_movie_main_title')
         for film in quot_h:
